@@ -1,22 +1,170 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-cn">
 <head>
     <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <!-- 方法一：使用 meta 刷新进行跳转 -->
-    <meta http-equiv="refresh" content="0; url=https://pay.mymzf.com/">
-    <!-- 方法二：使用 JavaScript 进行跳转 (作为备选) -->
-    <script>
-        window.location.href = "https://pay.mymzf.com/";
-    </script>
-    <!-- 为了SEO和无法跳转的用户，可以提供一个链接 -->
+    <title>${"web_index_title" | get_option}</title>
+    <meta name="keywords" content="${"web_keywords" | get_option}">
+    <meta name="description" content="${"web_description" | get_option}">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <link rel="stylesheet" type="text/css" href="${.templateAssets}/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="${.templateAssets}/css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="${.templateAssets}/css/animations.min.css">
+    <link rel="stylesheet" type="text/css" href="${.templateAssets}/css/style.css">
+    <link rel="stylesheet" type="text/css" href="${.templateAssets}/css/responsive.css">
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 2em; }
-        a { color: #0366d6; }
+      .section {
+        padding: 25px 0;
+        color: #666666;
+      }
+      .title-block {
+        text-align: center;
+      }
+      .title-block img {
+        filter: gray();
+        width: 85px;
+      }
     </style>
 </head>
 <body>
-    <h1>Redirecting</h1>
-    <p>If you are not redirected automatically, please click <a href="https://pay.mymzf.com/">here</a>.</p>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="logo">
+                            <a href=""><img src="${"web_logo" | get_option}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <ul class="menu">
+                            <li><a href="https://pay.mymzf.com/">网站首页</a></li>
+                            <li><a href="https://pay.mymzf.com/demo" target="_blank">demo测试</a></li>
+                            <li><a href="https://pay.mymzf.com/doc" target="_blank">开发文档</a></li>
+                            <li><a href="https://pay.mymzf.com/wx.jpg" target="_blank">客服微信</a></li>
+                            <li><a href="https://mazhifupay.com/" target="_blank">小微云码通知</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="button-header">
+                            <a href="https://pay.mymzf.com/user" class="custom-btn login">商户登录</a>
+                            <a href="https://pay.mymzf.com/register" class="custom-btn">注册商户</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-block">
+                <div class="logo-mobile">
+                    <a href=""><img src="${"web_logo" | get_option}" alt=""></a>
+                </div>
+                <a href="#" class="mobile-menu-btn"><span></span></a>
+                <div class="mobile-menu">
+                    <div class="inside">
+                        <div class="logo">
+                            <a href=""><img src="${"web_logo" | get_option}" alt=""></a>
+                        </div>
+                        <ul class="menu panel-group" id="accordion" aria-multiselectable="true">
+                            <li><a href="https://pay.mymzf.com/">网站首页</a></li>
+                            <li><a href="https://pay.mymzf.com/demo">demo测试</a></li>
+                            <li><a href="https://pay.mymzf.com/doc">开发文档</a></li>
+                        </ul>
+                        <div class="button-header">
+                            <a href="https://pay.mymzf.com/user" class="custom-btn login">商户登录</a>
+                            <a href="https://pay.mymzf.com/register" class="custom-btn">注册商户</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="base-slider owl-carousel owl-theme bg-gray">
+            <div class="item">
+                <img src="${.templateAssets}/picture/bg-test.png" alt="">
+                <div class="inside">
+                    <h2>${"web_title" | get_option} - 为创业者而生</h2>
+                    <h3>pay.mymzf.com</h3>
+                    <p>专注于提供安全、高效、严谨、便捷的订单数据服务！</p>
+                    <a href="https://pay.mymzf.com/login" class="custom-btn">立即登录</a>
+                </div>
+            </div>
+        </div>
+        <section class="bg-gray">
+            <div class="container">
+                <div class="why-choose animatedParent">
+                    <h2 class="title-head">全天候无人值守 7X24小时高效运转</h2>
+                    <div class="row">
+                        <div class="col-md-4 col-xs-12 animated bounceInUp delay-250 go">
+                            <div class="inside">
+                                <img src="${.templateAssets}/picture/optimised.svg" alt="">
+                                <a href="">极速响应</a>
+                                <p>付款后立即回调,无等待,流程超顺畅</p>
+                                <a href="https://pay.mymzf.com/register" class="read-more">加入我们<img src="${.templateAssets}/picture/right.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-12 animated bounceInUp delay-500 go">
+                            <div class="inside">
+                                <img src="${.templateAssets}/picture/powerfull.svg" alt="">
+                                <a href="">账单安全快速记录，无中间环节</a>
+                                <p>实时记录到个人账户订单</p>
+                                <a href="https://pay.mymzf.com/register" class="read-more">加入我们<img src="${.templateAssets}/picture/right.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-xs-12 animated bounceInUp delay-750 go">
+                            <div class="inside">
+                                <img src="${.templateAssets}/picture/website.svg" alt="">
+                                <a href="">账户安全</a>
+                                <p>绑定后无法更改,防止他人修改记录账户</p>
+                                <a href="https://pay.mymzf.com/templates/index/index8/assets/template/index/default/image/weixin.jpg" class="read-more">立即咨询<img src="${.templateAssets}/picture/right.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section section-pricing">
+            <div class="title-block">
+                平台合作伙伴
+                <div>
+                    <img src="${.templateAssets}/picture/aliyun.png" alt="">
+                    <img src="${.templateAssets}/picture/qqpay.png" alt="">
+                    <img src="${.templateAssets}/picture/wxpay.png" alt="">
+                    <img src="${.templateAssets}/picture/lakala.png" alt="">
+                    <img src="${.templateAssets}/picture/xinshengyi.png" alt="">
+                    <img src="${.templateAssets}/picture/snfaka.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="copyright text-center">
+                <p style="font-style: oblique; font-size: 14px; color: #FFF">${"web_title" | get_option}&nbsp;&nbsp;&copy;&nbsp;2025&nbsp;All Rights Reserved. </p>
+                <a href="https://beian.miit.gov.cn" target="_blank">琼ICP备2023003520号 ICP/EDI许可证：告琼B2-20230032</a>
+            </div>
+        </div>
+        <!-- Matomo统计 -->
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//tongji.mazhifupay.com/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '20']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<!-- End Matomo Code统计结束 -->
+
+    </footer>
+    <script type="text/javascript" src="${.templateAssets}/js/jquery.min.js"></script>
+    <script src="${.templateAssets}/js/owl.carousel.min.js"></script>
+    <script src="${.templateAssets}/js/main.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("header").addClass('transparent');
+        });
+    </script>
 </body>
 </html>
+    
